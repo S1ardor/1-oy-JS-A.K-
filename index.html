@@ -1,16 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lesson-3</title>
-    <link rel="stylesheet" href="main.css">
-</head>
-<body>
-    <output class="js-result">
-        Result:
-    </output>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lesson-4</title>
+        <link rel="stylesheet" href="main.css">
+        <link rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    </head>
+    <body>
 
-    <script src="script.js"></script>
-</body>
+       <div class="container">
+
+         <div class="box">
+            <form class="form-fon js-form">
+                <input class="input js-input" type="text" placeholder="Enter your UZS"
+                    aria-label="Enter your UZS" min="1" required>
+                <button class="button" type="submit">Valyuta</button>
+            </form>
+            <select class="section_contron js-select">
+                <option value disabled selected>Kurs tanlang</option>
+                <option value="1240">USA</option>
+                <option value="1300">EUR</option>
+                <option value="120">RUB</option>
+                <option value="1400">GBP</option>
+            </select>
+
+            <p class="letter js-letter">value sum:</p>
+        </div>
+
+       </div>
+
+
+        <script src="script.js"></script>
+    </body>
 </html>
