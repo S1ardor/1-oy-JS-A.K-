@@ -10,27 +10,50 @@
     </head>
     <body>
 
-       <div class="container">
-
-         <div class="box">
+        <div class="container">
+            <!-- 1-usul -->
+            <div class="box">
             <form class="form-fon js-form">
                 <input class="input js-input" type="text" placeholder="Enter your UZS"
                     aria-label="Enter your UZS" min="1" required>
+                    <select class="section_contron js-select">
+                        <option value disabled selected>Kurs tanlang</option>
+                        <option value="1240">USA</option>
+                        <option value="1300">EUR</option>
+                        <option value="120">RUB</option>
+                        <option value="1400">GBP</option>
+                    </select>
                 <button class="button" type="submit">Valyuta</button>
             </form>
-            <select class="section_contron js-select">
-                <option value disabled selected>Kurs tanlang</option>
-                <option value="1240">USA</option>
-                <option value="1300">EUR</option>
-                <option value="120">RUB</option>
-                <option value="1400">GBP</option>
-            </select>
-
-            <p class="letter js-letter">value sum:</p>
         </div>
+        <p class="letter js-letter">value sum:</p>
 
-       </div>
 
+
+
+
+
+            <!-- 2-usul input va button form ichida emas ya'ni form yozilmaga bootstrap dan oz foydalanilgan -->
+
+            <!-- <div class="input-group mb-3 mt-3 d-flex gap-3">
+                <input type="text" class="form-control js-input"
+                    placeholder="Recipient's username"
+                    aria-label="Recipient's username"
+                    aria-describedby="button-addon2">
+                <select class="form-select js-select"
+                    aria-label="Default select example">
+                    <option disabled selected>Open this select menu</option>
+                    <option value="1240">USA</option>
+                    <option value="1300">EUR</option>
+                    <option value="120">RUB</option>
+                    <option value="1400">GBP</option>
+                </select>
+                <button class="btn btn-outline-secondary js-button"
+                    type="button" id="button-addon2">Button</button>
+            </div>
+            <p class="letter js-letter">salom</p> -->
+
+        </div>
 
         <script src="script.js"></script>
     </body>
