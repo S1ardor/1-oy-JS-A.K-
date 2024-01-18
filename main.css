@@ -4,40 +4,19 @@
     padding: 0 20px;
 }
 
-.box {
-    margin-top: 30px;
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
-}
-
-.section_contron {
-    margin: 20px 0;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-.form-fon {
-    display: flex;
-    align-items: center;
-    column-gap: 20px;
-}
-
-.input {
-    padding: 8px;
-}
-
-.letter {
-    max-width: 200px;
+.result__text {
+    max-width: 210px;
     width: 100%;
-    padding: 11px;
     border: 1px solid #999;
+    padding: 0.35rem;
     border-radius: 5px;
-    color: #777;
+    margin-top: 10px;
 }
 
-.button {
-    border: 1px solid #777;
-    border-radius: 5px;
-    padding: 9px;
+.sty-form {
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    width: 100%;
+    margin-top: 20px;
 }

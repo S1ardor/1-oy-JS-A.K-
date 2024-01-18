@@ -1,48 +1,73 @@
-// * * * 1-mashq * * * // input va button form ni ichida. 2-usul esa bundan mustasino //
+// 1-mashq FizzBuzz//
 
 var elForm = document.querySelector(".js-form");
 var elInput = elForm.querySelector(".js-input");
-var elSelect = document.querySelector(".js-select");
-var elLetter = document.querySelector(".js-letter");
-var button = document.querySelector(".js-button");
+var elResult = document.querySelector(".js-result");
 
-elForm.addEventListener("submit", function (evt) {
+elForm.addEventListener("submit", function(evt){
   evt.preventDefault();
 
   var inputValue = elInput.value;
-  var selectValue = elSelect.value;
+  var fizzBuzzResult = "";
 
-  if (inputValue && selectValue) {
-    var result = inputValue * selectValue;
-    elLetter.textContent = `Sum: ${result}`;
-  } else {
-    elLetter.textContent = "Sum kiritish yoki valyuta tanash majburiy";
+  if(inputValue % 3 == 0 && inputValue % 5 == 0){
+    fizzBuzzResult += "FizzBuzz";
   }
-   // elForm.reset();
+  if(inputValue % 3 == 0){
+    fizzBuzzResult += "Fizz";
+  }
+  if(inputValue % 5 == 0){
+    fizzBuzzResult += "Buzz";
+  }
+  elResult.textContent = fizzBuzzResult || `${inputValue} bu son 3 ga va 5 ga bo'linmaydi`;
 });
 
 
 
 
 
-// 2-usul input va button form ichida emsa //
 
-// var elConvertButton = document.querySelector(".js-button");
-// var elInput = document.querySelector(".js-input");
-// var elSelect = document.querySelector(".js-select");
-// var elResult = document.querySelector(".js-letter");
+// 2-mashq  Find the number//
 
+// var elForm = document.querySelector(".js-form");
+// var elInput = elForm.querySelector(".js-input");
+// var elResult = document.querySelector(".js-result");
+// var elLimir = document.querySelector(".js-limit");
+// var elButton = elForm.querySelector(".js-button");
 
-// elConvertButton.addEventListener("click", function(evt){
+// var maxLimit = 6;
+// var randomNumber = Math.round(Math.random() * 100);
+// elLimir.textContent = `Urinishlar: ${maxLimit}`;
+// elLimir.textContent = `Urinishlar: ${maxLimit}`;
+// console.log(randomNumber);
+
+// elForm.addEventListener("submit", function (evt) {
 //   evt.preventDefault();
-
-//   var inputValue = elInput.value.trim();
-//   var selectValue = elSelect.value.trim();
-
-//   if(inputValue && selectValue){
-//     var boxResult = inputValue * selectValue;
-//     elResult.textContent = boxResult;
-//   }else{
-//     elResult.textContent = "Summanigizni kiritishingiz va valyuta tanlash majburiy";
+//   var inputValue = elInput.value;
+//   --maxLimit;
+//   elLimir.textContent = `Urinishlar: ${maxLimit}`;
+//   // urunishlar soni uchun shart //
+//   if (maxLimit == 0) {
+//     elLimir.textContent = "Urinshlar soni tugadi!";
+//     elInput.disabled = true;
+//     elButton.disabled = true;
+//     alert("Urinishlar soni tugadi!");
+//   } else if (inputValue == randomNumber) {
+//     console.log("malumod topildi!");
+//   } else {
+//     console.log("Malumod topilmadi!");
 //   }
+
+//   // kiritilgan raqam kotta yoki kichik yoki ten aniqlash uchun misol //
+//   if (inputValue > randomNumber) {
+//     elResult.textContent = "kritilgan raqam ixtiyoriy raqamdan kotta!";
+//   } else if (inputValue < randomNumber) {
+//     elResult.textContent = "kritilgan raqam ixtioriy raqamdan kichik!";
+//   } else {
+//     elResult.textContent = "Topdingiz !!!";
+//     elInput.disabled = true;
+//     elButton.disabled = true;
+//     alert("Topdingiz !!!");
+//   }
+//   elForm.reset();
 // });
