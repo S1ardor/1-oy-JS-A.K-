@@ -1,73 +1,70 @@
-// 1-mashq FizzBuzz//
-
-var elForm = document.querySelector(".js-form");
-var elInput = elForm.querySelector(".js-input");
-var elResult = document.querySelector(".js-result");
-
-elForm.addEventListener("submit", function(evt){
-  evt.preventDefault();
-
-  var inputValue = elInput.value;
-  var fizzBuzzResult = "";
-
-  if(inputValue % 3 == 0 && inputValue % 5 == 0){
-    fizzBuzzResult += "FizzBuzz";
-  }
-  if(inputValue % 3 == 0){
-    fizzBuzzResult += "Fizz";
-  }
-  if(inputValue % 5 == 0){
-    fizzBuzzResult += "Buzz";
-  }
-  elResult.textContent = fizzBuzzResult || `${inputValue} bu son 3 ga va 5 ga bo'linmaydi`;
-});
-
-
-
-
-
-
-// 2-mashq  Find the number//
-
+// Sinf ishii // 
+// 1-Task // input value ni hamma joyidan probel ni olib tashlashh yani replceAll() qilish //
 // var elForm = document.querySelector(".js-form");
 // var elInput = elForm.querySelector(".js-input");
 // var elResult = document.querySelector(".js-result");
-// var elLimir = document.querySelector(".js-limit");
-// var elButton = elForm.querySelector(".js-button");
 
-// var maxLimit = 6;
-// var randomNumber = Math.round(Math.random() * 100);
-// elLimir.textContent = `Urinishlar: ${maxLimit}`;
-// elLimir.textContent = `Urinishlar: ${maxLimit}`;
-// console.log(randomNumber);
-
-// elForm.addEventListener("submit", function (evt) {
+// elForm.addEventListener("submit", function(evt){
 //   evt.preventDefault();
-//   var inputValue = elInput.value;
-//   --maxLimit;
-//   elLimir.textContent = `Urinishlar: ${maxLimit}`;
-//   // urunishlar soni uchun shart //
-//   if (maxLimit == 0) {
-//     elLimir.textContent = "Urinshlar soni tugadi!";
-//     elInput.disabled = true;
-//     elButton.disabled = true;
-//     alert("Urinishlar soni tugadi!");
-//   } else if (inputValue == randomNumber) {
-//     console.log("malumod topildi!");
-//   } else {
-//     console.log("Malumod topilmadi!");
-//   }
-
-//   // kiritilgan raqam kotta yoki kichik yoki ten aniqlash uchun misol //
-//   if (inputValue > randomNumber) {
-//     elResult.textContent = "kritilgan raqam ixtiyoriy raqamdan kotta!";
-//   } else if (inputValue < randomNumber) {
-//     elResult.textContent = "kritilgan raqam ixtioriy raqamdan kichik!";
-//   } else {
-//     elResult.textContent = "Topdingiz !!!";
-//     elInput.disabled = true;
-//     elButton.disabled = true;
-//     alert("Topdingiz !!!");
-//   }
-//   elForm.reset();
+//   var inputValue = elInput.value.replaceAll(" ", "");
+//   elResult.textContent = inputValue;
 // });
+
+
+
+
+
+// 2-Task // textareage kritilgan sozdan input ga kiritilgan value ni index ni topish. indexOf() foydalanib //
+
+// var elForm = document.querySelector(".js-form");
+// var elInput = elForm.querySelector(".js-input");
+// var elTextArea = elForm.querySelector(".js-textarea");
+// var elResult = document.querySelector(".js-result");
+
+// elForm.addEventListener("submit", function(evt){
+//   evt.preventDefault();
+//   var inputValue = elInput.value.trim();
+//   var textAreaValue = elTextArea.value.trim();
+//   var resulValue = textAreaValue.indexOf(inputValue);
+//   elResult.textContent = resulValue;
+// });
+
+
+
+
+// 3-Task // textareage kritilgan sozdan input ga kiritilgan value bo'lsa true aks holda false ni qaytarsin. includes() foydalanib //
+
+// var elForm = document.querySelector(".js-form");
+// var elInput = elForm.querySelector(".js-input");
+// var elTextArea = elForm.querySelector(".js-textarea");
+// var elResult = document.querySelector(".js-result");
+
+// elForm.addEventListener("submit", function(evt) {
+//   evt.preventDefault();
+
+//   var inputValue = elInput.value.trim();
+//   var textAreaValue = elTextArea.value.trim();
+//   var resultBool = textAreaValue.includes(inputValue);
+//   elResult.textContent = resultBool;
+// });
+
+
+
+
+// 4-Task //
+
+var elForm = document.querySelector(".js-form");
+var elInput = elForm.querySelector(".js-input");
+var elTwoInput = elForm.querySelector(".js-twoinput");
+var elTextArea = elForm.querySelector(".js-textarea");
+var elResult = document.querySelector(".js-result");
+
+elForm.addEventListener("submit", function(evt) {
+  evt.preventDefault();
+  var wordIndex = elTextArea.value.indexOf(elInput.value)
+  var wordTwoIndex = elTextArea.value.indexOf(elTwoInput.value);
+  var result = elTextArea.value.substring(wordIndex, wordTwoIndex);
+  elResult.textContent = result;
+});
+
+
