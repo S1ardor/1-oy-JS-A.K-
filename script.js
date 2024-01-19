@@ -1,70 +1,78 @@
-// Sinf ishii // 
-// 1-Task // input value ni hamma joyidan probel ni olib tashlashh yani replceAll() qilish //
-// var elForm = document.querySelector(".js-form");
-// var elInput = elForm.querySelector(".js-input");
-// var elResult = document.querySelector(".js-result");
+// 1-Task // birinchi harf kotta yoki kichik ekanligni aniqlash //
 
-// elForm.addEventListener("submit", function(evt){
-//   evt.preventDefault();
-//   var inputValue = elInput.value.replaceAll(" ", "");
-//   elResult.textContent = inputValue;
-// });
+var elForm = document.querySelector(".js-form");
+var elInput = elForm.querySelector(".js-input");
+var elResult = document.querySelector(".js-result");
 
+elForm.addEventListener("submit", function(evt) {
+  evt.preventDefault();
 
-
-
-
-// 2-Task // textareage kritilgan sozdan input ga kiritilgan value ni index ni topish. indexOf() foydalanib //
-
-// var elForm = document.querySelector(".js-form");
-// var elInput = elForm.querySelector(".js-input");
-// var elTextArea = elForm.querySelector(".js-textarea");
-// var elResult = document.querySelector(".js-result");
-
-// elForm.addEventListener("submit", function(evt){
-//   evt.preventDefault();
-//   var inputValue = elInput.value.trim();
-//   var textAreaValue = elTextArea.value.trim();
-//   var resulValue = textAreaValue.indexOf(inputValue);
-//   elResult.textContent = resulValue;
-// });
+  var inputValue = elInput.value.trim();
+if(inputValue == ""){
+  elResult.textContent= "harf kiritishingiz shart";
+}else if(inputValue[0] == inputValue[0].toUpperCase()){
+    elResult.textContent = "birinchi harf kotta!";
+  }else{
+    elResult.textContent = "birinchi harf kichik!";
+  }
+});
 
 
 
-
-// 3-Task // textareage kritilgan sozdan input ga kiritilgan value bo'lsa true aks holda false ni qaytarsin. includes() foydalanib //
+// 2-Task // birinchi va oxirgi harf bir-biriga oxshash yoki oxhsash emasligini topish // 
 
 // var elForm = document.querySelector(".js-form");
 // var elInput = elForm.querySelector(".js-input");
-// var elTextArea = elForm.querySelector(".js-textarea");
 // var elResult = document.querySelector(".js-result");
 
 // elForm.addEventListener("submit", function(evt) {
 //   evt.preventDefault();
 
 //   var inputValue = elInput.value.trim();
-//   var textAreaValue = elTextArea.value.trim();
-//   var resultBool = textAreaValue.includes(inputValue);
-//   elResult.textContent = resultBool;
+
+//   if(inputValue[0] == inputValue[inputValue.length -1]){
+//     elResult.textContent = "BINGOO !!!";
+//   }else{
+//     elResult.textContent = "Birinchi va oxirgi harf xar-xil!";
+//   }
+
 // });
 
 
 
+// 3-Task // birinchi son kotta bolsa kichikga kichik bolsa kottaga o'zgartirish ToUpperCase(), ToLowerCase() foydalanib.
 
-// 4-Task //
+// var elForm = document.querySelector(".js-form");
+// var elInput = elForm.querySelector(".js-input");
+// var elResult = document.querySelector(".js-result");
+// var newText = "";
 
-var elForm = document.querySelector(".js-form");
-var elInput = elForm.querySelector(".js-input");
-var elTwoInput = elForm.querySelector(".js-twoinput");
-var elTextArea = elForm.querySelector(".js-textarea");
-var elResult = document.querySelector(".js-result");
+// elForm.addEventListener("submit", function(evt) {
+//   evt.preventDefault();
+//    var inputValue = elInput.value.trim();
 
-elForm.addEventListener("submit", function(evt) {
-  evt.preventDefault();
-  var wordIndex = elTextArea.value.indexOf(elInput.value)
-  var wordTwoIndex = elTextArea.value.indexOf(elTwoInput.value);
-  var result = elTextArea.value.substring(wordIndex, wordTwoIndex);
-  elResult.textContent = result;
-});
+//    if(inputValue[0] == inputValue[0].toUpperCase()){
+//     newText = inputValue[0].toLowerCase() + inputValue.slice(1, inputValue.length);
+//    }else if(inputValue[0] == inputValue[0].toLowerCase()){
+//     newText = inputValue[0].toUpperCase() + inputValue.slice(1, inputValue.length);
+//    }
+//    elResult.textContent = newText
+// });
 
 
+
+// 4-Task // uch marotaba son kritiladi va o'sha sonlardan o'rtanchasini topish.
+
+// var oneNumber = prompt("birinchi son  kriting");
+// var twoNumber = prompt("ikkinchi son kriting");
+// var threeNumber = prompt("uchunchi son kriting");
+
+// if(oneNumber > twoNumber && oneNumber < threeNumber || oneNumber < twoNumber && oneNumber > threeNumber){
+//   console.log(oneNumber);
+// }else if(twoNumber > oneNumber && twoNumber < threeNumber || twoNumber < oneNumber && twoNumber > threeNumber){
+//   console.log(twoNumber);
+// }else if(threeNumber > oneNumber && threeNumber < twoNumber || threeNumber < oneNumber && threeNumber > twoNumber){
+//   console.log(threeNumber)
+// }else{
+//   console.log("xato!");
+// }
