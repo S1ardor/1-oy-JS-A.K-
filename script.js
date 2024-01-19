@@ -1,107 +1,38 @@
-var elInput = document.querySelector(".js-input");
-var elPreButton = document.querySelector(".js-btn");
-var elNextButton = document.querySelector(".js-button");
-var elResult = document.querySelector(".js-result");
-var elPreDelete = document.querySelector(".js-predelete");
-var elNextDelete = document.querySelector(".js-nextdelete");
+var elPokeList = document.querySelector(".js-pokelist");
+var elimg = document.querySelector(".js-name");
+var slicePokemons = pokemons.slice(0, 20);
 
-var cars = ["BMW", "MERS", "AUDI", "BYD"];
-elResult.textContent = cars.join(" ");
-console.log(cars);
+for (var poke of slicePokemons) {
+  var newList = document.createElement("li");
+  var newPokemonNum = document.createElement("span");
+  var newPokeImg = document.createElement("img");
+  var newPokemonName = document.createElement("strong");
+  var newCondyCount = document.createElement("time");
+  var newListType = document.createElement("h6");
+  var newListCandy = document.createElement("p");
 
-elPreButton.addEventListener("click", function(evt) {
-  var inputValue = elInput.value.trim().toUpperCase();
-  var carsUnshift = cars.unshift(inputValue);
-  elResult.textContent = carsUnshift;
-  elResult.textContent = cars;
-});
+  newPokemonNum.textContent = poke.num;
+  newPokeImg.src = poke.img;
+  newPokeImg.alt = poke.name + "pokemon qaxramoni";
+  newPokemonName.textContent = poke.name;
+  newCondyCount.textContent = poke.spawn_chance;
+  newListType.textContent = poke.type.join(", ");
+  newListCandy.textContent = poke.candy;
 
-elNextButton.addEventListener("click", function (evt) {
-  var inputNextValue = elInput.value.trim().toUpperCase();
-  var carsPush = cars.push(inputNextValue);
-  elResult.textContent = carsPush;
-  elResult.textContent = cars;
-});
-
-// Pre va Next dan delete //
-var inputDeleteValue = elInput.value;
-
-elPreDelete.addEventListener("click", function(){
-    var preDelete = cars.shift(inputDeleteValue);
-    elResult.textContent = preDelete;
-    elResult.textContent = cars;
-  });
-  
-  elNextDelete.addEventListener("click", function () {
-    var preDelete = cars.pop(inputDeleteValue);
-    elResult.textContent = preDelete;
-    elResult.textContent = cars;
-  });
+  newList.append(newPokemonNum, newPokeImg, newPokemonName, newCondyCount, newListType, newListCandy);
+  elPokeList.appendChild(newList);
+}
 
 
 
 
+// maximum sonni topish formulasi //
 
-
-
-
-
-
-
-// 2-usul css ga etibor berilmagan lekin kod yaxshi chiqgan//
-
-// const elForm = document.querySelector(".js-form");
-// var elInput = document.querySelector(".js-input");
-// var elPreButton = document.querySelector(".js-button");
-// var elNextButton = document.querySelector(".js-btn");
-// var elPreButtonDelete = document.querySelector(".js-delete__pre-button");
-// var elNextButtonDelete = document.querySelector(".js-delete__next-button");
-// var elRender = document.querySelector(".box");
-// const elBtns = document.querySelectorAll(".js-form button");
-
-// var cars = ["BMW", "MERS", "AUDI", "BYD"];
-
-// const elList = document.querySelector(".js-list")
-// let elTemplate = document.querySelector(".js-template").content
-// const handleRenderList = (arr) => {
-//     if(arr.length){
-//         const documentFragment = document.createDocumentFragment()
-//         elList.innerHTML = null
-//         for(const word of arr){
-//             const clone = elTemplate.cloneNode(true)
-//             const elHeading = clone.querySelector("h3")
-//             elHeading.textContent = word
-//             documentFragment.appendChild(clone);
-//         }   
-//         elList.appendChild(documentFragment);
-//     }
-// }
-// const handleClick = (evt) => {
-//     console.log(evt.target.id)
-//     switch(evt?.target?.id){
-//         case "before":{
-//             cars.unshift(elInput.value)
-//         }break;
-//         case "after":{
-//             cars.push(elInput.value)
-//         }break;
-//         case "left":{
-//             cars.shift()
-//         }break;
-//         case "right":{
-//             cars.pop()
-//         }break;
-//         default: return false
-//     }
-//     handleRenderList(cars)
-// }
-// elBtns.forEach((item) => {
-//     item.addEventListener("click", handleClick)
-// })
-// elForm.addEventListener("submit", function(evt){
-   
-//     evt.preventDefault()
-//     var inputValue = elInput.value;
-
-// });
-// handleRenderList(cars);
+var numbers = [1, 4, 6, 10, 3, 8, 9];
+var result = 0;
+for(var num of numbers){
+  if(num > result){
+    result = num;
+  }
+}
+console.log(result);

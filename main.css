@@ -1,17 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #333 !important;
+}
+
 .container {
     width: 1200px;
     margin: 0 auto;
     padding: 0 20px;
 }
 
-.result__to-delete {
+.header__content {
     text-align: center;
 }
 
-.result__par {
-    border-radius: 5px;
-    background-color: rgb(16, 99, 171);
+.pokemon__img {
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    margin-bottom: 100px;
+}
+
+.js-pokelist {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 30px;
+    row-gap: 30px;
+    text-align: center;
+}
+
+.js-pokelist li {
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    width: 100%;
+    padding: 1rem;
+    border-radius: 10px;
+    min-height: 380px;
+    position: relative;
+    transition: all 0.4s ease;
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.4);
+    border: 0 solid transparent;
+    border-top: 2px solid #D6C887;
+}
+
+.js-pokelist li:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.js-pokelist img {
+    max-width: 150px;
+    width: 100%;
+    margin: 5% 20%;
+}
+
+.js-pokelist span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #D6C887;
+    border-radius: 10px 0 10px 0;
+    padding: 5px 16px;
+    color: #000;
+    font-weight: 700;
+}
+
+.js-pokelist strong {
+    font-size: 25px;
+    line-height: 35px;
     color: #fff;
+}
+
+.js-pokelist time {
+    margin: 10px auto;
+    margin-top: 10px;
+    background: #FFC406;
+    color: #000;
+    max-width: 70px;
+    width: 100%;
+    text-align: center;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.js-pokelist h6 {
+    background-color: #b71828;
+    max-width: 150px;
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 4px 11px;
+    color: #fff;
+}
+
+.js-pokelist p {
+    background: #D6C887;
+    margin-top: 15px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -15px;
+    border-radius: 0 0 10px 10px;
+    padding: 22px;
+    color: #000;
+    font-weight: 600;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 26px;
 }
