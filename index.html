@@ -3,28 +3,26 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Lesson-9</title>
+        <title>Lesson-10</title>
         <link rel="stylesheet" href="./main.css">
         <link rel="stylesheet"
             href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
     </head>
     <body>
 
-        <header>
-            <nav class="navbar">
-                <div class="container">
-                    <div class="header__content">
-                        <img class="pokemon__img" src="./img/pokemon-logo-2.png" alt="poke">
-                        <div class="pokemon__card">
-                            <ul class="poketext js-pokelist d-flex justify-content-center flex-wrap list-unstyled">
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </nav>
-        </header>
+        <div class="container">
+        <div>
+            <form class="js-form input-group mb-3">
+                <input type="text" class="js-input form-control"
+                placeholder="Recipient's username"
+                aria-label="Recipient's username"
+                aria-describedby="basic-addon2">
+            <button type="submit" class="input-group-text" id="basic-addon2">Click</button>
+            </form>
+            <span class="js-result">Result: </span>
+        </div>
+        </div>
 
-        <script src="./pokemons.js"></script>
         <script src="./script.js"></script>
     </body>
 </html>
