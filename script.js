@@ -19,19 +19,23 @@ for (var poke of slicePokemons) {
   newListType.textContent = poke.type.join(", ");
   newListCandy.textContent = poke.candy;
 
-  newList.append(newPokemonNum, newPokeImg, newPokemonName, newCondyCount, newListType, newListCandy);
+  newList.append(
+    newPokemonNum,
+    newPokeImg,
+    newPokemonName,
+    newCondyCount,
+    newListType,
+    newListCandy
+  );
   elPokeList.appendChild(newList);
 }
-
-
-
 
 // maximum sonni topish formulasi //
 
 var numbers = [1, 4, 6, 10, 3, 8, 9];
 var result = 0;
-for(var num of numbers){
-  if(num > result){
+for (var num of numbers) {
+  if (num > result) {
     result = num;
   }
 }
