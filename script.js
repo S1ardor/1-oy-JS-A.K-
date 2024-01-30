@@ -51,7 +51,7 @@
 
 
 
-// 4-Task //
+// 4-Task // kesish yani slice(), substri() vhk foydalanib.
 
 var elForm = document.querySelector(".js-form");
 var elInput = elForm.querySelector(".js-input");
@@ -63,7 +63,7 @@ elForm.addEventListener("submit", function(evt) {
   evt.preventDefault();
   var wordIndex = elTextArea.value.indexOf(elInput.value)
   var wordTwoIndex = elTextArea.value.indexOf(elTwoInput.value);
-  var result = elTextArea.value.substring(wordIndex, wordTwoIndex);
+  var result = elTextArea.value.slice(wordIndex, wordTwoIndex);
   elResult.textContent = result;
 });
 
