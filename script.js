@@ -1,4 +1,4 @@
-// * * * 1-mashq * * * // input va button form ni ichida. 2-usul esa bundan mustasino //
+// * * * 1-mashq * * * // input va button, form ni ichida. 2-usul esa bundan mustasino 
 
 var elForm = document.querySelector(".js-form");
 var elInput = elForm.querySelector(".js-input");
@@ -25,7 +25,7 @@ elForm.addEventListener("submit", function (evt) {
 
 
 
-// 2-usul input va button form ichida emsa //
+// * * * 2-usul * * * // input va button form ichida emsa 
 
 // var elConvertButton = document.querySelector(".js-button");
 // var elInput = document.querySelector(".js-input");
