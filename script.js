@@ -1,4 +1,4 @@
-// 1-mashq FizzBuzz//
+// 1-mashq DOM FizzBuzz mashqi bajarish 
 
 var elForm = document.querySelector(".js-form");
 var elInput = elForm.querySelector(".js-input");
@@ -10,9 +10,6 @@ elForm.addEventListener("submit", function(evt){
   var inputValue = elInput.value;
   var fizzBuzzResult = "";
 
-  if(inputValue % 3 == 0 && inputValue % 5 == 0){
-    fizzBuzzResult += "FizzBuzz";
-  }
   if(inputValue % 3 == 0){
     fizzBuzzResult += "Fizz";
   }
@@ -27,7 +24,7 @@ elForm.addEventListener("submit", function(evt){
 
 
 
-// 2-mashq  Find the number//
+// 2-mashq // Find the number kiritilgan son random som ga o'xshshmi.
 
 // var elForm = document.querySelector(".js-form");
 // var elInput = elForm.querySelector(".js-input");
